@@ -3,7 +3,7 @@
 
   var FORM_SELECTOR = '[data-smashedavo-order="form"]';
   var CHECKLIST_SELECTOR = '[data-smashedavo-order="checklist"]';
-  var SERVER_URL = 'https://smashed-avo.firebaseio.com/api/smashedavoOrders.json';
+  var SERVER_URL = 'https://smashed-avo.firebaseio.com/api.json';
 
   var App = window.App;
   var Truck = App.Truck;

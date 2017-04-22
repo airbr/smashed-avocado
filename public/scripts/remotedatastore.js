@@ -7,11 +7,12 @@
       throw new Error('No remote URL supplied.');
       return;
     }
-    console.log(this.serverUrl);
+    console.log(url);
     this.serverUrl = url;
   }
   RemoteDataStore.prototype.add = function(key, val) {
-    return $.post(this.serverUrl, val, function(serverResponse) {
+                                // JSON Stringify for Firebase Database
+    return $.post(this.serverUrl, JSON.stringify(val), function(serverResponse) {
       console.log(serverResponse);
     });
   };
