@@ -22,12 +22,12 @@
     });
   };
   RemoteDataStore.prototype.get = function(key) {
-    return $.get(JSON.parse(this.serverUrl), function(serverResponse) {
+    return $.get(this.serverUrl, function(serverResponse) {
       console.log(serverResponse);
     });
   };
   RemoteDataStore.prototype.remove = function(key) {
-    return $.ajax(this.serverUrl + '/' + key, {
+    return $.ajax(this.serverUrl, {
       type: 'DELETE'
     });
   };
