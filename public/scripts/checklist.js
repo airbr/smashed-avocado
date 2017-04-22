@@ -31,7 +31,6 @@
     this.$element.on('click', 'input', function(event) {
       // Why not preventDefault here?
       // Because it would prevent the item from being checked.
-      //   console.log(event.target.value);
       prototype(event.target.value)
                                     .then(function() {
                                       this.removeRow(event.target.value);
