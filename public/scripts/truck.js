@@ -21,7 +21,6 @@
         var customerIdArray = Object.keys(allData);
         console.log('Truck #' + this.truckId + ' has pending orders:');
         customerIdArray.forEach(function(id) {
-          console.log(allData[id]);
           if (printFn) {
             printFn(allData[id]);
           }
