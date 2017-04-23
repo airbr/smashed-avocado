@@ -3,7 +3,7 @@
   var App = window.App || {};
   var Validation = {
     isValidEmail: function(email) {
-      return /\@/.test(email);
+      return /./.test(email);
     }
   };
   App.Validation = Validation;
