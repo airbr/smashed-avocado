@@ -13,13 +13,13 @@
   var CheckList = App.CheckList;
 
   var remoteDS = new RemoteDataStore(SERVER_URL);
-  var myTruck = new Truck('test', remoteDS);
+  var myTruck = new Truck('Avocado Truck', remoteDS);
     // TODO: Make app offline/online switching
     // var myTruck = new Truck('LocalDS', new DataStore());
     window.myTruck = myTruck;
 
   var checkList = new CheckList(CHECKLIST_SELECTOR);
-  console.log(checkList);
+  // console.log(checkList);
   // Attaches Particular window js truck to the DOM checklist for deletes
   checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
   var formHandler = new FormHandler(FORM_SELECTOR);

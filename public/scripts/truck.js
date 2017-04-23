@@ -19,7 +19,7 @@
       this.db.getAll()
       .then(function(allData) {
         var customerIdArray = Object.keys(allData);
-        console.log('Truck #' + this.truckId + ' has pending orders:');
+        console.log(this.truckId + ' has pending orders:');
         customerIdArray.forEach(function(id) {
           if (printFn) {
             printFn(allData[id]);
