@@ -8,17 +8,17 @@
   "description": "Smashing Avocado since the Great Recession",
   "icons": [
     {
-      "src": "/avocado144.png",
+      "src": "avocado144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/avocado192.png",
+      "src": "avocado192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/avocado256.png",
+      "src": "avocado256.png",
       "sizes": "256x256",
       "type": "image/png"
     }
