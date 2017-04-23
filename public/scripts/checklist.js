@@ -53,13 +53,14 @@
       value: smashedavoOrder.email
     });
 
-    var description = smashedavoOrder.size + ' ';
+    // Process string for description
+    var description = smashedavoOrder.size + ' portion, ';
     if (smashedavoOrder.flavor) {
-      description += smashedavoOrder.flavor + ' ';
+      description += smashedavoOrder.flavor + ', ';
     }
-    description += smashedavoOrder.smashedavo + ', ';
+    description += smashedavoOrder.name + ', ';
     description += ' (' + smashedavoOrder.email + ')';
-    description += ' [' + smashedavoOrder.strength + 'x]';
+    description += ' [' + smashedavoOrder.strength + 'x Paleos!!]';
 
     $label.append($checkbox);
     $label.append(description);

@@ -18,7 +18,7 @@
       this.$formElement.on('submit', function(event) {
         event.preventDefault();
         var data = {
-          smashedavo: this.elements.smashedavo.value,
+          name: this.elements.name.value,
           email: this.elements.emailAddress.value,
           size: this.elements.size.value,
           flavor: this.elements.flavor.value,
