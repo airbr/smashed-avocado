@@ -7,7 +7,7 @@
       throw new Error('No remote URL supplied.');
       return;
     }
-    console.log(url);
+    // console.log(url);
     this.serverUrl = url;
   }
   RemoteDataStore.prototype.add = function(key, val) {
@@ -18,7 +18,9 @@
   };
   RemoteDataStore.prototype.getAll = function() {
     return $.get(this.serverUrl, function(serverResponse) {
+      console.group('All the Avocado Orderers...');
       console.log(serverResponse);
+      console.groupEnd();
     });
   };
   RemoteDataStore.prototype.get = function(key) {
@@ -31,7 +33,6 @@
       type: 'DELETE'
     });
   };
-
   App.RemoteDataStore = RemoteDataStore;
   window.App = App;
 })(window);

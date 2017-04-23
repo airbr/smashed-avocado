@@ -15,7 +15,6 @@
     return this.db.remove(customerId);
   };
   Truck.prototype.printOrders = function(printFn) {
-      // console.dirxml(this.db.getAll());
       this.db.getAll()
       .then(function(allData) {
         var customerIdArray = Object.keys(allData);
