@@ -1,0 +1,26 @@
+{
+  "name": "Smashed Avocado As A Service (SAAAS)",
+  "short_name": "Smashed-Avo",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "green",
+  "theme_color": "brown",
+  "description": "Smashing Avocado since the Great Recession",
+  "icons": [
+    {
+      "src": "/avocado144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/avocado192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/avocado256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}
