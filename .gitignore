@@ -1,0 +1,7 @@
+public/bower_components
+database.rules.json
+firebase.json
+.firebaserc
+node_modules
+functions
+.idea
