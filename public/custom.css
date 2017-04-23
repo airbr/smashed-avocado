@@ -9,5 +9,7 @@ html {
 .placer {
     margin-top: 20px;
     height: 70vw;
+}
+.background {
     background: url();
 }
