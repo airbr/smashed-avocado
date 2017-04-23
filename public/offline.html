@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <!--Critical for mobile use-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Smashed Avocado As A An Offline-First Service (SAAAOFS)</title>
+
+      <!--v3.3.6-->
+      <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+      <link href="stylesheets/custom.css" rel="stylesheet">
+
+      <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+
+      <link rel="manifest" href="manifest.json">
+  </head>
+  <body class="container placer background">
+    <header>
+        <h1><span>Smashed Avo - Offline WIP</span></h1>
+    </header>
+    <section>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form data-smashedavo-order="form">
+            <div class="form-group">
+              <label for="smashedavoOrder">You want some Avocado huh?</label>
+              <input class="form-control" name="name" id="smashedavoOrder" autofocus required  pattern="[a-zA-Z\s]+" />
+            </div>
+            <div class="form-group">
+              <label for="emailInput">How hungry are you?</label>
+              <!--TODO: Testing second string field - no need for email in this example - note for branch-->
+              <input class="form-control" type="name" name="emailAddress" id="emailInput" value="" placeholder=" " required />
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="side">
+                Side portion
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="entree" checked>
+                Entree meal
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="extravagant">
+                Extravaganza
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="style">Have it your way:</label>
+              <select id="style" class="form-control" name="flavor">
+                <option value="">None</option>
+                <option value="Smash it">Smash it</option>
+                <option value="Smash it good">Smash it good</option>
+                <option value="Smash it real good">Smash it real good</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="strengthLevel">From 1-100, how Paleo do you want this dish?</label>
+              <input name="strength" id="strengthLevel" type="range" value="30">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="reset" class="btn btn-default">Reset</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>Pending Orders:</h4>
+          <div data-smashedavo-order="checklist">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAuy9BgA5yrt37RTk1vYuaNsS0q-gRQ77M",
+            authDomain: "smashed-avo.firebaseapp.com",
+            databaseURL: "http://smashed-avo.firebaseio.com/",
+            projectId: "smashed-avo",
+            storageBucket: "smashed-avo.appspot.com",
+            messagingSenderId: "1014661078914"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!--v2.1.4-->
+    <script src="bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
+    <!--v3.0.2-->
+    <script src="bower_components/es6-promise/promise.js" charset="utf-8"></script>
+
+    <script src="scripts/checklist.js" charset="utf-8"></script>
+    <script src="scripts/validation.js"></script>
+    <script src="scripts/formhandler.js" charset="utf-8"></script>
+    <script src="scripts/remotedatastore.js"></script>
+    <!--<script src="scripts/datastore.js" charset="utf-8"></script>-->
+    <script src="scripts/truck.js" charset="utf-8"></script>
+    <script src="scripts/main.js" charset="utf-8"></script>
+  </body>
+</html>
