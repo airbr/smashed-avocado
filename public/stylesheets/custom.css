@@ -16,3 +16,9 @@ html {
 header {
     background: beige;
 }
+form :focus:required:valid {
+    border-color: green;
+}
+form :focus:required:invalid {
+    border-color: saddlebrown;
+}

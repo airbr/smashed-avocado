@@ -6,9 +6,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Smashed Avocado As A Service (SAAAS)</title>
 
+      <!--v3.3.6-->
+      <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 
-    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="stylesheets/custom.css" rel="stylesheet">
+      <link href="stylesheets/custom.css" rel="stylesheet">
 
       <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
       <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
@@ -26,12 +27,8 @@
       <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
-    <style>
-      form :focus:required:invalid {
-        border-color: #a94442;
-      }
-    </style>
-    <link rel="manifest" href="manifest.json">
+
+      <link rel="manifest" href="manifest.json">
   </head>
   <body class="container placer background">
     <header>
@@ -43,12 +40,12 @@
           <form data-smashedavo-order="form">
             <div class="form-group">
               <label for="smashedavoOrder">You want some Avocado huh?</label>
-              <input class="form-control" name="name" id="smashedavoOrder" autofocus  pattern="[a-zA-Z\s]+" />
+              <input class="form-control" name="name" id="smashedavoOrder" autofocus required  pattern="[a-zA-Z\s]+" />
             </div>
             <div class="form-group">
               <label for="emailInput">How hungry are you?</label>
               <!--TODO: Testing second string field - no need for email in this example - note for branch-->
-              <input class="form-control" type="name" name="emailAddress" id="emailInput" value="" placeholder=" " />
+              <input class="form-control" type="name" name="emailAddress" id="emailInput" value="" placeholder=" " required />
             </div>
             <div class="radio">
               <label>
@@ -111,10 +108,11 @@
         firebase.initializeApp(config);
     </script>
 
-
-
+    <!--v2.1.4-->
     <script src="bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
+    <!--v3.0.2-->
     <script src="bower_components/es6-promise/promise.js" charset="utf-8"></script>
+
     <script src="scripts/checklist.js" charset="utf-8"></script>
     <script src="scripts/validation.js"></script>
     <script src="scripts/formhandler.js" charset="utf-8"></script>
