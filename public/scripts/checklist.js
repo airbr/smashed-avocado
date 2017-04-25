@@ -40,6 +40,11 @@
     }.bind(this));
   };
 
+  // TODO: wet solution for messy cases from attaching values to dom. Make function part of module as prototype/ clean up dom/string stuff below?
+  function titleCase(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   function Row(smashedavoOrder) {
     var $div = $('<div/>', {
       'data-smashedavo-order': 'checkbox',
@@ -54,11 +59,11 @@
     });
 
     // Process /concat string for description
-    var description = smashedavoOrder.size + ' portion size, ';
+    var description = titleCase(smashedavoOrder.size) + ' portion size, ';
     if (smashedavoOrder.flavor) {
-      description += 'with instructions to ' + smashedavoOrder.flavor + ', ';
+      description += 'with instructions to ' + titleCase(smashedavoOrder.flavor) + ', ';
     }
-    description += 'on the way up for ' + smashedavoOrder.name + ', ';
+    description += 'on the way up for ' + titleCase(smashedavoOrder.name) + ', ';
     description += ' (' + smashedavoOrder.email + ')';
     description += ' [' + smashedavoOrder.strength + ' Paleo strength.]';
 
