@@ -40,11 +40,17 @@
         <div class="panel-body">
           <form data-smashedavo-order="form">
             <div class="form-group">
-              <label for="smashedavoOrder">You want some Avocado huh?</label>
-              <input class="form-control" name="name" id="smashedavoOrder" autofocus required  pattern="[a-zA-Z\s]+" />
+              <label>You want some Avocado huh?</label>
+              <!--<input class="form-control" name="name" id="smashedavoOrder" autofocus required  pattern="[a-zA-Z\s]+" />-->
+              <select id="style" class="form-control" name="name">
+                <option value="">None</option>
+                <option value="1">Yeah</option>
+                <option value="2">Very</option>
+                <option value="3">Give it to me now</option>
+              </select>
             </div>
             <div class="form-group">
-              <label for="emailInput">How hungry are you?</label>
+              <label for="emailInput">Whats your email?</label>
               <!--TODO: Testing second string field - no need for email in this example - note for branch-->
               <input class="form-control" type="name" name="emailAddress" id="emailInput" value="" placeholder=" " required />
             </div>
