@@ -1,0 +1,29 @@
+{
+  "name": "smashedavo",
+  "homepage": "https://github.com/airbr/smashed-avocado",
+  "authors": [
+    "Morgan Murrah <mmurrah@airbridge.ac.nz>"
+  ],
+  "description": "Avocado Smashing As A Service (ASAAS)",
+  "main": "",
+  "keywords": [
+    "html",
+    "css",
+    "javascipt",
+    "jquery",
+    "pwa"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.4",
+    "es6-promise": "3.0.2",
+    "bootstrap": "3.3.6"
+  }
+}
